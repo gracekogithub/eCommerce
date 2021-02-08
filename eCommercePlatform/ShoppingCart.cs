@@ -8,31 +8,27 @@ namespace eCommercePlatform
 {
     public class ShoppingCart
     {
-        // variable
-        string chosenProduct;
-        int numberChosen;
-        double eachPrice;
-        double totalCostProducts;
-        string summaryOfSelection;
-
-
-        //constructor
-        public ShoppingCart(string chosenProduct, int numberChosen, double eachPrice, 
-            double totalCostProducts, string summaryOfSelection)
+        // variable(has a..)
+        public List<Product> products;
+        public double totalCostProducts;
+        //constructor(initial value)
+        public ShoppingCart()
         {
-            this.chosenProduct = chosenProduct;
-            this.numberChosen = numberChosen;
-            this.eachPrice = eachPrice;
-            this.totalCostProducts = totalCostProducts;
-            this.summaryOfSelection = summaryOfSelection;
+            List<Product>itemChosen = new List<Product>();
+           
+          
+            
         }
-        //methods
+        //methods(can do)
         public void PurchasedProduct()
         {
-
+            
+            Console.WriteLine($"You have added following items{products}.");
+            Console.WriteLine("Please click place your order button");
+            
         }
 
-
+        
 
     }
 }

@@ -6,37 +6,34 @@ using System.Threading.Tasks;
 
 namespace eCommercePlatform
 {
-    class Platform
+    public class Platform
     {
-        // variable 
+        //variables
         public List<Product> inventory;
-       
-
-        //constructor
-        public Platform() 
-        {
-            inventory = new List<Product>();            
-        }
-
-        //methods
         
-        private Product CreateProduct(int uniqueIdentifier, string name, string category, double price)
+        //constructor
+        public Platform()
         {
-            Product product = new Product(uniqueIdentifier, name, category, price);
-            return product;
+            
+            List<Product> inventory= new List<Product>();
+            inventory.Add(new Product(11, "round table", "tables", 49.99));
+            inventory.Add(new Product(12, "square table", "tables", 39.99));
+            inventory.Add(new Product(21, "arm chair", "chairs", 144.99));
+            inventory.Add(new Product(22, "stool", "chairs", 44.99));
+            inventory.Add(new Product(31, "sectional sofa", "sofas", 44.99));
+
+
+            //Inventory.Add("tables");
+            //Inventory.Add("chairs");
+            //Inventory.Add("sofas");
+
+            //foreach (var inventory in Inventory)
+            //{
+            //    Console.WriteLine(inventory);
+            //}
         }
-        private void PopulateInventory(Product product) 
-
-        {
-            Console.WriteLine("Welcome to my store!");
-           
-            string userInput = Console.ReadLine();
-
-
-        }
+        //methods
 
        
-
-
     }
 }

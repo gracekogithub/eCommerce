@@ -8,10 +8,10 @@ namespace eCommercePlatform
 {
     public class Consumer
     {
+        //variable (has)
         public string firstName;
         public string lastName;
-        public string shoppingCart;
-
+        public ShoppingCart shoppingCart;
 
         //constructor
         public Consumer(string firstName, string lastName)
@@ -20,17 +20,20 @@ namespace eCommercePlatform
             this.lastName = lastName;
             
         }
-
-
-
         //methods
-        public void UsePlatform(Consumer consumer)
+        public void EnterYourName()
         {
-
+            string fullName = firstName + lastName;
+            Console.WriteLine("What is your first name: ");
+            string userInput = Console.ReadLine();
+            Console.WriteLine("What is your last name: ");
+            string userInput2 = Console.ReadLine();
         }
-        public void FullNameIs()
+        
+       
+        public void ChooseYourProduct(string Product)
         {
-            Console.WriteLine();
+            Console.WriteLine("You chose" + Product);
         }
 
 
